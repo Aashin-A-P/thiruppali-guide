@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "பற்றி",
-  description: "தமிழ் திருப்பலி வழிகாட்டி பற்றிய சுருக்கமான விளக்கம்."
+  description: "திருப்பலி வழிகாட்டி தளத்தின் நோக்கம் மற்றும் பயன்பாடு பற்றிய சுருக்கமான விளக்கம்.",
+  alternates: {
+    canonical: "/about"
+  }
 };
 
 export default function AboutPage() {

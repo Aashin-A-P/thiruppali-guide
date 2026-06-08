@@ -22,12 +22,28 @@ export const metadata: Metadata = {
     template: "%s | திருப்பலி வழிகாட்டி"
   },
   description:
-    "Tamil Sunday Mass guide with readings, introductions, faithful prayers, archive, search, and print-friendly pages.",
-  metadataBase: new URL("https://thiruppali-guide.vercel.app"),
+    "தமிழ் ஞாயிறு திருப்பலி முன்னுரை, வாசக குறிப்புகள், பதிலுரைப்பாடல், நற்செய்தி முன்னுரை மற்றும் நம்பிக்கையாளரின் மன்றாட்டுகள்.",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://thiruppali-guide.vercel.app/"),
+  keywords: [
+    "திருப்பலி",
+    "ஞாயிறு திருப்பலி",
+    "தமிழ் திருப்பலி முன்னுரை",
+    "Tamil Mass guide",
+    "Sunday Mass Tamil",
+    "நம்பிக்கையாளரின் மன்றாட்டு"
+  ],
   openGraph: {
     title: "திருப்பலி வழிகாட்டி",
-    description: "Tamil Sunday Mass guide with clean reading, archive, search, and print support.",
-    type: "website"
+    description: "தமிழ் ஞாயிறு திருப்பலி வழிகாட்டிகள், வாசகங்கள், முன்னுரைகள், மன்றாட்டுகள் மற்றும் அச்சிடும் வசதி.",
+    type: "website",
+    locale: "ta_IN"
+  },
+  alternates: {
+    canonical: "/"
+  },
+  robots: {
+    index: true,
+    follow: true
   }
 };
 

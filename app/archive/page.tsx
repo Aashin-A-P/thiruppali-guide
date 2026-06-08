@@ -7,7 +7,10 @@ export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "காப்பகம்",
-  description: "Browse Tamil Mass guide posts by month and year."
+  description: "தமிழ் திருப்பலி வழிகாட்டி பதிவுகளை மாதம் மற்றும் வருடம் அடிப்படையில் காணலாம்.",
+  alternates: {
+    canonical: "/archive"
+  }
 };
 
 export default async function ArchivePage() {

@@ -32,12 +32,26 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
     return {};
   }
 
+  const description = [
+    post.feastName,
+    post.readingReferences.length ? `வாசகங்கள்: ${post.readingReferences.join(", ")}` : "",
+    post.massIntroduction[0] || ""
+  ]
+    .filter(Boolean)
+    .join(" - ")
+    .slice(0, 160);
+
   return {
-    title: post.title,
-    description: `${post.feastName} - ${post.readingReferences.join(", ")}`,
+    title: `${post.title} - ${formatTamilDate(post.massDate)}`,
+    description,
+    alternates: {
+      canonical: `/posts/${post.slug}`
+    },
     openGraph: {
       title: post.title,
-      description: post.massIntroduction[0],
+      description,
+      type: "article",
+      publishedTime: post.publishedAt,
       images: post.featuredImage ? [{ url: post.featuredImage.url, alt: post.featuredImage.alt }] : undefined
     }
   };

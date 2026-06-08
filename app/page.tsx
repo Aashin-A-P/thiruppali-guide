@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CalendarDays, FileText, Search } from "lucide-react";
@@ -5,6 +6,15 @@ import { PostCard } from "@/components/post-card";
 import { formatTamilDate, getAllPosts, getLatestPost } from "@/lib/posts";
 
 export const revalidate = 60;
+
+export const metadata: Metadata = {
+  title: "தமிழ் ஞாயிறு திருப்பலி முன்னுரை மற்றும் மன்றாட்டுகள்",
+  description:
+    "தமிழ் ஞாயிறு திருப்பலி முன்னுரை, வாசக குறிப்புகள், பதிலுரைப்பாடல், நற்செய்தி முன்னுரை மற்றும் நம்பிக்கையாளரின் மன்றாட்டுகளை வாசிக்கவும் அச்சிடவும்.",
+  alternates: {
+    canonical: "/"
+  }
+};
 
 export default async function HomePage() {
   const latest = await getLatestPost();

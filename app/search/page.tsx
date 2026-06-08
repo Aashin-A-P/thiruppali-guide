@@ -6,7 +6,10 @@ export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "தேடல்",
-  description: "Search Tamil Mass guide posts by Tamil or English keywords."
+  description: "தமிழ் திருப்பலி பதிவுகளை தலைப்பு, திருநாள், வாசக குறிப்பு அல்லது குறிச்சொல் மூலம் தேடலாம்.",
+  alternates: {
+    canonical: "/search"
+  }
 };
 
 export default async function SearchPage() {

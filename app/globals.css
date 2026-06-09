@@ -97,6 +97,8 @@ a {
   .print-document section {
     border: 0 !important;
     padding-top: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
     break-inside: avoid;
   }
 
@@ -106,7 +108,7 @@ a {
     font-size: 15pt !important;
     line-height: 1.35 !important;
     font-weight: 700 !important;
-    margin: 0 0 8pt !important;
+    margin: 0 0 4pt !important;
   }
 
   .print-document .article-content {
@@ -114,7 +116,7 @@ a {
   }
 
   .print-document .article-content p {
-    margin: 0 0 8pt !important;
+    margin: 0 0 5pt !important;
     text-align: left !important;
   }
 

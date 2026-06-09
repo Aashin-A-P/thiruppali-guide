@@ -124,15 +124,15 @@ export default async function PostPage({ params }: PostPageProps) {
           </figure>
         ) : null}
 
-        <div className="mt-8 space-y-10 print:mt-0 print:space-y-5">
+        <div className="mt-8 space-y-10 print:mt-0 print:space-y-0">
           <ReadingBlock references={post.readingReferences} />
           <ArticleSection title="திருப்பலி முன்னுரை" paragraphs={post.massIntroduction} />
           {post.inlineImages?.[0] ? <InlineArticleImage image={post.inlineImages[0]} /> : null}
           <ArticleSection title="முதல் வாசக முன்னுரை" paragraphs={post.firstReadingIntroduction} />
-          <ArticleSection title="பதிலுரைப்பாடல்" paragraphs={post.responsorialPsalm} />
+          <ArticleSection title="பதிலுரைப்பாடல்" paragraphs={post.responsorialPsalm} printHidden />
           <ArticleSection title="இரண்டாம் வாசக முன்னுரை" paragraphs={post.secondReadingIntroduction} />
-          <ArticleSection title="நற்செய்திக்கு முன் வாழ்த்தொலி" paragraphs={post.gospelAcclamation} />
-          <ArticleSection title="நற்செய்தி முன்னுரை" paragraphs={post.gospelIntroduction} />
+          <ArticleSection title="நற்செய்திக்கு முன் வாழ்த்தொலி" paragraphs={post.gospelAcclamation} printHidden />
+          <ArticleSection title="நற்செய்தி முன்னுரை" paragraphs={post.gospelIntroduction} printHidden />
           <ArticleSection title="நம்பிக்கையாளரின் மன்றாட்டு" paragraphs={post.prayerOfTheFaithful} />
         </div>
 

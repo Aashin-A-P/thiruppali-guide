@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/posts";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://thiruppali-guide.vercel.app/";
+const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://thiruppali-guide.vercel.app").replace(/\/$/, "");
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await getAllPosts();

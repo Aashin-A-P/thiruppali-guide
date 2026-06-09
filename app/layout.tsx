@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   description:
     "தமிழ் ஞாயிறு திருப்பலி முன்னுரை, வாசக குறிப்புகள், பதிலுரைப்பாடல், நற்செய்தி முன்னுரை மற்றும் நம்பிக்கையாளரின் மன்றாட்டுகள்.",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://thiruppali-guide.vercel.app/"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://thiruppali-guide.vercel.app"),
   keywords: [
     "திருப்பலி",
     "ஞாயிறு திருப்பலி",

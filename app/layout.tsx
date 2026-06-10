@@ -3,6 +3,7 @@ import { Noto_Sans_Tamil, Noto_Serif_Tamil } from "next/font/google";
 import "./globals.css";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { Analytics } from "@vercel/analytics/next";
 
 const tamilSans = Noto_Sans_Tamil({
   subsets: ["tamil"],
@@ -54,6 +55,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <SiteHeader />
         {children}
         <SiteFooter />
+        <Analytics />
       </body>
     </html>
   );

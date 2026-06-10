@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, CalendarDays } from "lucide-react";
@@ -94,16 +93,9 @@ export default async function PostPage({ params }: PostPageProps) {
 
         {post.featuredImage ? (
           <figure className="decorative-image mt-8 overflow-hidden rounded-lg border border-maroon/10 bg-vellum">
-            <div className="relative aspect-[16/9]">
-              <Image
-                src={post.featuredImage.url}
-                alt={post.featuredImage.alt}
-                fill
-                priority
-                sizes="(min-width: 768px) 850px, 100vw"
-                className="object-cover"
-              />
-            </div>
+            {/* Use the image's natural aspect ratio on article pages so uploaded artwork is not cropped. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={post.featuredImage.url} alt={post.featuredImage.alt} className="h-auto w-full object-contain" />
             {(post.featuredImage.credit || post.featuredImage.creditUrl) && (
               <figcaption className="px-4 py-3 text-xs text-ink/60">
                 படம்:{" "}
